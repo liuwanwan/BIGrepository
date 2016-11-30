@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mysecurity">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="com.mysecurity.MyApplication"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".phoneinfomanagement.GetBatteryStateActivity" >   </activity>
+        <activity android:name=".phoneinfomanagement.BatteryState" >   </activity>
+        <activity android:name=".appmanagement.AppInfoActivity" >     </activity>
+        <activity android:name=".processmanagement.AppTaskProgressActivity"></activity>
+        <activity
+            android:theme="@style/NoTitleDialog"
+            android:name=".processmanagement.AppPermissionInfoActivity"></activity>
+        <activity
+            android:theme="@style/NoTitleDialog"
+            android:name=".appmanagement.AppDetailActivity"></activity>
+        <activity android:name=".processmanagement.ProcessSettingActivity"></activity>
+        <activity android:name=".phoneinfomanagement.GetPhoneStateActivity" >     </activity>
+        <activity android:name=".rubbishcleanmanagement.CacheCleanActivity" >     </activity>
+        <activity android:name=".rubbishcleanmanagement.RubbishCleanActivity" >     </activity>
+        <activity android:name=".rubbishcleanmanagement.CleanSDCardActivity" >     </activity>
+    </application>
+
+</manifest>

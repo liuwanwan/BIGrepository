@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mysecurity.ui.MainActivity"
+    tools:showIn="@layout/ui_main">
+
+
+    <LinearLayout
+        android:id="@+id/layout_inspection"
+        android:layout_width="fill_parent"
+        android:layout_height="170dip"
+        android:background="@drawable/main_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dip"
+            android:layout_height="170dip"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rv"
+                android:layout_width="120dip"
+                android:layout_height="120dip">
+
+                <ImageView
+                    android:id="@+id/iv_inspection"
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:background="@drawable/main_status_baohu"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/iv_cache"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/check_sweep"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="65dip"
+                android:gravity="center"
+                android:text="建议进行一键体检\n了解手机是否健康"
+                android:textColor="@color/tv_white"
+                android:textSize="15sp"
+                android:typeface="monospace" />
+
+            <Button
+                android:id="@+id/bt_inspection"
+                android:layout_width="115dip"
+                android:layout_height="40dip"
+                android:background="#FF00A6FD"
+                android:gravity="center"
+                android:onClick="kill_cache"
+                android:text="一键体检" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:background="#000000" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <GridView
+            android:id="@+id/gv_function"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background"
+            android:horizontalSpacing="6dip"
+            android:numColumns="3"
+            android:verticalSpacing="6dip" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip">
+
+            <LinearLayout
+                android:id="@+id/layout_inspection_item"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:orientation="vertical"
+                android:scaleType="fitXY"
+                android:visibility="gone">
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

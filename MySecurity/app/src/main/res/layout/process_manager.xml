@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#dd555F5F"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_app_manager"
+            style="@style/title_text_style"
+            android:text="进程管理"
+            android:textColor="@color/tv_white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        style="@style/title_text_style"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_totle_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/process_clear"/>
+        <TextView
+            android:id="@+id/tv_memory_unuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/process_clear"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white" >
+
+        <ListView
+            android:id="@+id/lv_process_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:background="@android:color/white"
+            android:cacheColorHint="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/ll_process_load"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_manager_load"
+                android:textColor="#ffbc04e5"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        style="@style/title_text_style"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal">
+        
+        <Button 
+            android:id="@+id/bt_process_refresh"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="刷新"/>
+        <Button
+            android:id="@+id/bt_process_clear"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="清理"/>
+        <Button 
+            android:id="@+id/bt_process_setting"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="设置"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

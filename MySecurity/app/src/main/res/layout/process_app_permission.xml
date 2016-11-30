@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/title_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_app_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:text="应用名称"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:text="权限列表"/>
+
+    <ScrollView
+        android:id="@+id/sv_app_detail_desc"
+        android:layout_width="match_parent"
+        android:layout_height="250dip"></ScrollView>
+
+</LinearLayout>
